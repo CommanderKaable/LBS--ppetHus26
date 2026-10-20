@@ -4,7 +4,7 @@ import { asset } from "../lib/asset.js";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
-import ScrollBanner from "../components/ScrollBanner";
+import SectionTransition from "../components/SectionTransition";
 import BackToTop from "../components/BackToTop";
 
 // Visar programm sida 
@@ -871,8 +871,9 @@ export default function ProgramShow() {
         </div>
       </section>
 
+      {/* Rullande banner sist på sidan, där sidfoten låg tidigare */}
+      <SectionTransition variant={data.color === "orange" ? "yellow" : data.color} />
       <BackToTop />
-      <ScrollBanner variant={data.color === "orange" ? "yellow" : data.color} />
     </main>
   );
 }

@@ -242,71 +242,40 @@
         font-size: 9px;
         max-width: none;
     }
-}
 
-/* ---------- 3. RULLANDE BANNER OVANFÖR BOTTENMENYN ---------- */
-
-.scroll-banner {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: var(--bottom-nav-h, 0px);
-    z-index: 49; /* precis under menyn (50) */
-    overflow: hidden;
-    pointer-events: none;
-    transform: translateY(110%);
-    opacity: 0;
-    transition: transform .4s cubic-bezier(.2, .8, .2, 1), opacity .3s ease;
-}
-
-.scroll-banner.is-visible {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* Kompakt version av SectionTransition när den ligger fast */
-.scroll-banner .section-transition {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 0 !important;
-    height: 44px;
-    padding: 0;
-    z-index: auto;
-}
-
-.scroll-banner .transition-track span {
-    font-size: 26px !important;
-    gap: 14px;
-    margin-right: 14px;
-}
-
-.scroll-banner .transition-pixels {
-    display: none;
-}
-
-@media (min-width: 901px) {
-    .scroll-banner .section-transition {
-        height: 56px;
+    /* Kartknappen ligger i linje med de andra: ingen upplyftning,
+       mindre gul cirkel, och alla ikoner får samma höjd (32 px) så att
+       ikonerna och texterna hamnar på samma linjer. */
+    .nav > a.nav-cta {
+        transform: none;
+        gap: 4px;
+        padding: 4px 1px;
     }
 
-    .scroll-banner .transition-track span {
-        font-size: 34px !important;
+    .nav .nav-icon-wrap {
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
+    }
+
+    .nav .nav-cta .nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav > a:not(.nav-cta) > .nav-icon {
+        margin: 5.5px 0;
     }
 }
 
-/* Plats längst ner så att innehållet inte göms bakom banner + meny */
+/* ---------- 3. RULLANDE BANNER + PLATS FÖR BOTTENMENYN ---------- */
+
+/* Bannern (SectionTransition) ligger sist i varje vy, i originalets storlek.
+   På mobil får sidan luft längst ner så att bannern inte göms bakom bottenmenyn. */
 @media (max-width: 900px) {
-    /* Läggs i vyns egen sektion så att dess bakgrundsfärg fyller ut */
-    .site main > :last-child,
-    .program-show > section:last-of-type {
-        padding-bottom: calc(var(--bottom-nav-h, 70px) + 44px + 24px) !important;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .scroll-banner {
-        transition: none;
+    .site main,
+    .program-show {
+        padding-bottom: calc(72px + env(safe-area-inset-bottom));
     }
 }
 
@@ -362,7 +331,7 @@
 /* Upp-knappen hamnar ovanför banner och bottenmeny */
 @media (max-width: 900px) {
     .back-to-top {
-        bottom: calc(var(--bottom-nav-h, 70px) + 56px);
+        bottom: calc(72px + env(safe-area-inset-bottom) + 16px);
         right: 14px;
     }
 }

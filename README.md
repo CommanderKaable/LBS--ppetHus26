@@ -42,7 +42,7 @@ npm run dev
 
 - `src/App.jsx` – vyerna Start, Hitta ditt program, Våra program, Skolans karta, Anmäl dig
 - `src/pages/ProgramShow.jsx` – programsidorna
-- `src/components/ScrollBanner.jsx` – den rullande bannern ovanför bottenmenyn
+- `src/components/SectionTransition.jsx` – den rullande bannern sist i varje vy
 - `src/styles.css` – originalets stilar (orörda)
 - `src/openhouse.css` – alla nya eller ändrade stilar för den sammanslagna appen
 

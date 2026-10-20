@@ -1,4 +1,10 @@
-# Changelog – Öppet hus-appen (version 2.0)
+# Changelog – Öppet hus-appen
+
+## 2.1
+- Den gula kartknappen i bottenmenyn ligger i linje med de andra. Cirkeln är 32 px i stället för 42 px och inte längre upplyft.
+- Den rullande bannern ligger sist i varje vy i stället för fast ovanför menyn.
+
+## 2.0
 
 Sammanslagning av app 1 (LBS, karta och program) och app 2 (Öppet hus, quiz).
 App 1 används som grund. Den grafiska profilen är oförändrad: färger, typsnitt, kort, knappar och animationer.
@@ -23,10 +29,11 @@ App 1 används som grund. Den grafiska profilen är oförändrad: färger, typsn
 
 ## Ändrat eller omdöpt (=)
 - Programsidan: snabblänken **Innehåll** heter nu **Programfördjupning**
-- Den rullande bannern "SKAPA. TESTA. UTVECKLA." ligger nu fast ovanför bottenmenyn. Den glider
-  fram när man har scrollat ungefär en skärmhöjd och försvinner när man scrollar upp igen.
+- Den rullande bannern "SKAPA. TESTA. UTVECKLA." ligger sist i varje vy, även på programsidorna,
+  där sidfoten låg tidigare. Den har originalets storlek och täcker aldrig något innehåll.
 - Bottenmenyn (mobil): `HITTA DITT PROGRAM · VÅRA PROGRAM · SKOLANS KARTA · ANMÄL DIG`.
-  Kartknappen tar dubbel bredd (1 · 1 · 2 · 1).
+  Kartknappen tar dubbel bredd (1 · 1 · 2 · 1) och har kvar sin gula cirkel, men ligger i linje
+  med de andra knapparna: den är inte längre upplyft, och ikoner och texter ligger på samma höjd.
 - Startsidans knappar: `HITTA DITT PROGRAM · SKOLANS KARTA · VÅRA PROGRAM · ELEV FÖR EN DAG`
 - Programsidorna visar nu samma meny och banner som resten av appen. Tidigare hade de ingen meny.
 - "Tillbaka till program" går till programöversikten i stället för webbläsarens bakåt. Det gör

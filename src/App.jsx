@@ -4,7 +4,7 @@ import Programs from "./components/Programs.jsx";
 import Form from "./components/Form.jsx";
 import OpenHouseInteractive from "./components/OpenHouseInteractive.jsx";
 import ProgramQuiz from "./components/ProgramQuiz.jsx";
-import ScrollBanner from "./components/ScrollBanner.jsx";
+import SectionTransition from "./components/SectionTransition.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ const sectionComponents = {
   openhouse: OpenHouseInteractive
 };
 
-// Färg på den rullande bannern per vy
+// Färg på den rullande bannern (sist i varje vy)
 const bannerVariants = {
   brand: "magenta",
   quiz: "cyan",
@@ -53,8 +53,9 @@ export default function App() {
         ) : (
           <Hero onNavigate={handleNavigate} />
         )}
+        {/* Rullande banner sist i varje vy, där sidfoten låg tidigare */}
+        <SectionTransition variant={bannerVariants[activeSection]} />
       </main>
-      <ScrollBanner variant={bannerVariants[activeSection]} />
     </div>
   );
 }
