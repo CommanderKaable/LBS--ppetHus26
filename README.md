@@ -27,6 +27,8 @@ Reponamnet spelar ingen roll. Appen använder relativa sökvägar och adresser m
 |---|---|
 | Rubriker och texter för salar och byggnader på kartan | `src/data/salar.js` |
 | Kartknapparnas placering | `src/data/salar.js` (`kartknappar`) |
+| Kartbilderna | `public/karta/`. Byt filen och behåll namnet, eller ändra `image` i `salar.js` |
+| Startsidans bakgrundsfoto | `public/lbs-hero.jpg` |
 | Quizfrågor, svar och resultattexter | `src/components/ProgramQuiz.jsx` |
 | Programsidornas innehåll och länkar till lbs.se | `src/pages/ProgramShow.jsx` (`lbsUrl`) |
 | Programkorten på "Våra program" | `src/components/Programs.jsx` |

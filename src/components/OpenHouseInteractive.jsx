@@ -8,7 +8,7 @@ import { asset } from '../lib/asset.js'
 // OpenHouseInteractive visar skolans karta. Klicka på en byggnad för att se planritningen.
 // Texterna och knapparnas placering redigeras i src/data/salar.js
 const roompick = Object.fromEntries(
-    Object.entries(salar).map(([key, room]) => [key, { ...room, image: asset(room.image) }])
+    Object.entries(salar).map(([key, room]) => [key, { ...room, image: room.image ? asset(room.image) : "" }])
 )
 
 const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
@@ -17,7 +17,7 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
     const preloadedImages = useRef([])
 
     useEffect(() => {
-        preloadedImages.current = Object.values(roompick).map(({ image }) => {
+        preloadedImages.current = Object.values(roompick).filter(({ image }) => image).map(({ image }) => {
             const preloadedImage = new Image()
             preloadedImage.onerror = () => {
                 console.error(`Could not preload classroom map: ${image}`)
@@ -35,6 +35,8 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
 
     const selectRoom = (room) => {
         if (room === roomSelected) return
+        // Byggnader utan planritning (tom image i salar.js) gör ingenting
+        if (!roompick[room]?.image) return
 
         setRoomHistory(previous => [...previous, roomSelected])
         setRoomSelected(room)
@@ -63,7 +65,7 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
     const selectedMap = roompick[roomSelected]
 
     return (
-        <section className="section openhouse-map-section" id="openhouse">
+        <section className={`section openhouse-map-section${isMainMap ? " is-overview" : ""}`} id="openhouse">
             <div className="openhouse-map-heading text-center">
                 <p className="mono-label dark">[ ÖPPET HUS ]</p>
             </div>

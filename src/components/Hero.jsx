@@ -1,4 +1,5 @@
 import ArrowIcon from "./ArrowIcon.jsx";
+import { asset } from "../lib/asset.js";
 
 import { IoGameController } from "react-icons/io5";
 import { MdDesignServices } from "react-icons/md";
@@ -9,7 +10,7 @@ import { IoMusicalNotesSharp } from "react-icons/io5";
 // Hero: startsidan med de fyra huvudknapparna.
 export default function Hero({ onNavigate }) {
   return (
-    <section className="hero" id="open-house">
+    <section className="hero hero--photo" id="open-house" style={{ "--hero-photo": `url("${asset("lbs-hero.jpg")}")` }}>
       <div className="icons-floating">
         <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>

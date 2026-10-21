@@ -1,5 +1,14 @@
 # Changelog – Öppet hus-appen
 
+## 2.2
+- Startsidan har fotot från app 2 (`lbs bild 2.jpg`, förminskat till `public/lbs-hero.jpg`) som bakgrund.
+  De flytande programikonerna ligger kvar ovanpå, och en mörk ton gör texten läsbar.
+- Alla kartbilder är utbytta mot de nya i `public/karta/`. De gamla kartbilderna är borttagna.
+- Översiktskartan (`Hela_skolan.png`) fyller bredden i stället för att krympas till en skärmhöjd.
+  Knapparna är mindre och omplacerade efter den nya bilden.
+- **Fakiren är tillbaka** med en knapp som öppnar `Fakiren.png`.
+- **B-byggnaden** har en knapp, men den gör ingenting förrän en planritning finns. Fyll i `image` för B i `src/data/salar.js`.
+
 ## 2.1
 - Den gula kartknappen i bottenmenyn ligger i linje med de andra. Cirkeln är 32 px i stället för 42 px och inte längre upplyft.
 - Den rullande bannern ligger sist i varje vy i stället för fast ovanför menyn.
@@ -19,8 +28,7 @@ App 1 används som grund. Den grafiska profilen är oförändrad: färger, typsn
 ## Borttaget (−)
 - **Om oss**, inklusive nyheter, galleri och nyhetsartiklar. Ersätts av quizet.
 - **Kontakta oss** (sidfoten). Kontaktuppgifterna finns kvar i "Anmäl dig".
-- **F-byggnaden (Fakiren)** från kartan, både knappen och byggnaden på översiktsbilden.
-  Originalbilden `Karta_vit.png` finns kvar. Appen använder `Karta_vit_utan_fakiren.png`.
+- ~~F-byggnaden (Fakiren) från kartan~~. Den lades tillbaka i 2.2.
 - Programsidan: sektionerna **Projekt**, **Efter gymnasiet** och **Lokaler**, med salskartan
   och bannern "Här kan du hitta … klassrummet"
 - Allt i app 2 utom quizet
