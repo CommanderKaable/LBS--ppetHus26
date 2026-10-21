@@ -1,5 +1,12 @@
 # Changelog – Öppet hus-appen
 
+## 2.3
+- Fix: startsidans bakgrundsfoto syntes inte på GitHub Pages. Adressen till fotot var relativ och
+  tolkades från CSS-filen i `assets/`, så webbläsaren letade efter `assets/lbs-hero.jpg`.
+  Nu används en fullständig adress.
+- Våningsknapparna ("↑ Tredje våningen" i A och "↑ Andra våningen" i D) ligger ovanför
+  planritningen i stället för ovanpå den, så att de inte täcker något på kartan.
+
 ## 2.2
 - Startsidan har fotot från app 2 (`lbs bild 2.jpg`, förminskat till `public/lbs-hero.jpg`) som bakgrund.
   De flytande programikonerna ligger kvar ovanpå, och en mörk ton gör texten läsbar.

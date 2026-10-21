@@ -400,3 +400,11 @@
     font-size: .8rem;
     white-space: nowrap;
 }
+
+/* Våningsknappen ("↑ Tredje våningen" / "↑ Andra våningen") ligger
+   ovanför planritningen i stället för ovanpå den */
+.openhouse-floor-nav {
+    display: flex;
+    justify-content: center;
+    margin: .25rem 0 1rem;
+}

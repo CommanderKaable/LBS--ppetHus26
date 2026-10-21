@@ -94,6 +94,21 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                         </p>
                     </div>
                 </div>
+                {/* Våningsknappar ovanför planritningen, så att de inte täcker kartan */}
+                {(showAnerNavigation || showDNavigation) && (
+                    <div className="openhouse-floor-nav">
+                        {showAnerNavigation && (
+                            <ButtonClassroom id="button-up-aupp" onClick={() => selectRoom("Aupp")}>
+                                ↑ Tredje våningen
+                            </ButtonClassroom>
+                        )}
+                        {showDNavigation && (
+                            <ButtonClassroom id="button-up-dupp" onClick={() => selectRoom("Dupp")}>
+                                ↑ Andra våningen
+                            </ButtonClassroom>
+                        )}
+                    </div>
+                )}
                 <div className="openhouse-map-stage">
                     <div className="openhouse-map-image-wrap">
                         <img
@@ -124,39 +139,6 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                                 ))}
 
 
-                        {showAnerNavigation && (
-                            <>
-                                <ButtonClassroom
-                                    id="button-up-aupp"
-                                    style={{
-                                        position: "absolute",
-                                        left: "50%",
-                                        top: "15%",
-                                        transform: "translate(-50%, -50%)",
-                                    }}
-                                    onClick={() => selectRoom("Aupp")}
-                                >
-                                    ↑ Tredje våningen
-                                </ButtonClassroom>
-                            </>
-                        )}
-
-                        {showDNavigation && (
-                            <>
-                                <ButtonClassroom
-                                    id="button-up-dupp"
-                                    style={{
-                                        position: "absolute",
-                                        left: "50%",
-                                        top: "15%",
-                                        transform: "translate(-50%, -50%)",
-                                    }}
-                                    onClick={() => selectRoom("Dupp")}
-                                >
-                                    ↑ Andra våningen
-                                </ButtonClassroom>
-                            </>
-                        )}
                     </div>
                 </div>
             </div>

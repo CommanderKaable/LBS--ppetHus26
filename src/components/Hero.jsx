@@ -8,9 +8,13 @@ import { RiGame2Fill } from "react-icons/ri";
 import { PiFilmSlateFill } from "react-icons/pi";
 import { IoMusicalNotesSharp } from "react-icons/io5";
 // Hero: startsidan med de fyra huvudknapparna.
+// Fullständig adress till fotot. En relativ adress i en CSS-variabel tolkas
+// relativt CSS-filen (som hamnar i assets/ vid bygget) och hittar då inte bilden.
+const heroPhoto = new URL(asset("lbs-hero.jpg"), document.baseURI).href;
+
 export default function Hero({ onNavigate }) {
   return (
-    <section className="hero hero--photo" id="open-house" style={{ "--hero-photo": `url("${asset("lbs-hero.jpg")}")` }}>
+    <section className="hero hero--photo" id="open-house" style={{ "--hero-photo": `url("${heroPhoto}")` }}>
       <div className="icons-floating">
         <IoGameController></IoGameController>
         <IoMusicalNotesSharp></IoMusicalNotesSharp>
