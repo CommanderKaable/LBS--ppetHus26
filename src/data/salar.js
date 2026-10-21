@@ -23,17 +23,17 @@ const salar = {
     C: {
         image: "karta/C-huset.png",
         title: "C-BYGGNADEN",
-        description: "Planritning över C-byggnaden, foto & film ligger här.",
+        description: "Planritning över C-byggnaden. Här hittar foto & film intriktningen, samt vår foto, film och podd studio.",
     },
     D: {
         image: "karta/D1.png",
         title: "D-BYGGNADEN · FÖRSTA VÅNINGEN",
-        description: "Första våningens planritning. Eleverna har AI & webbutveckling och spelgrafik här. Välj andra våningen för att fortsätta upp i byggnaden.",
+        description: "Första våningens planritning. Här finns vårt  AI & Webbutvecklings klassrum och bildsal. Välj andra våningen för att fortsätta upp i byggnaden.",
     },
     Dupp: {
         image: "karta/D3.png",
         title: "D-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över D-byggnadens andra våning. Grafisk Desing våning",
+        description: "Planritning över D-byggnadens andra våning. Här finns Grafisk Desing",
     },
     F: {
         image: "karta/Fakiren.png",
@@ -50,17 +50,17 @@ const salar = {
     Studion: {
         image: "karta/Musikstudion.png",
         title: "STUDION",
-        description: "Planritning över studion och dess lokaler för musik produktion.",
+        description: "Översikt över musikstudion och dess lokaler för musik produktion.",
     },
     Aupp: {
         image: "karta/Ovre_vaning_A-huset.png",
         title: "A-BYGGNADEN · TREDJE VÅNINGEN",
-        description: "Planritning över A-byggnadens tredje våning. Lobby, administration och elevhälsa ligger här. ",
+        description: "Planritning över A-byggnadens tredje våning. Lobby, administration, elevhälsa och bilioteket ligger här. ",
     },
     Aner: {
         image: "karta/andra_vaning_A-huset.png",
         title: "A-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över A-byggnadens andra våning, Teknik(spelutveckling och AI & Webbutveckling) i klassrum A7, Spelgrafik i A3 och i A5 finns filmer för visning för Fotofilm. Välj tredje våningen för att fortsätta.",
+        description: "Planritning över A-byggnadens andra våning. I klassrumet A7 finns Spelutveckling och AI & Webbutveckling i klassrumet A6, Spelgrafik finns i A3. I A5 är det filmvisning av Fotofilm programmet. Välj tredje våningen för att fortsätta.",
     },
 };
 
