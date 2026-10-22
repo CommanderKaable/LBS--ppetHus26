@@ -1,5 +1,11 @@
 # Changelog – Öppet hus-appen
 
+## 2.4
+- Nya texter för alla byggnader och våningar på kartan (`src/data/salar.js`)
+- "STUDION" heter nu "MUSIKSTUDION"
+- **B-byggnaden** har en egen sida med rubrik och text men ingen kartbild. Knappen öppnar den.
+- `\n` i en salstext ger en ny rad. Det används i översiktstexten.
+
 ## 2.3
 - Fix: startsidans bakgrundsfoto syntes inte på GitHub Pages. Adressen till fotot var relativ och
   tolkades från CSS-filen i `assets/`, så webbläsaren letade efter `assets/lbs-hero.jpg`.

@@ -6,7 +6,9 @@
 //
 //  • title       = rubriken som visas ovanför kartbilden
 //  • description = texten under rubriken
-//  • image       = bildfilen i mappen /public/karta (ändra bara om du byter bild)
+//  • image       = bildfilen i mappen /public/karta (ändra bara om du byter bild).
+//                  Tom ("") = sidan visar bara rubrik och text, utan karta.
+//  • \n i en text = ny rad
 //
 //  Tänk på:
 //  • Behåll citattecknen " " runt texten och kommatecknet efter.
@@ -18,49 +20,49 @@ const salar = {
     Karta: {
         image: "karta/Hela_skolan.png",
         title: "SKOLANS KARTA",
-        description: "Översikt över skolans byggnader. Välj en byggnad för att se dess planritning.",
+        description: "Nedan är en översikt över skolans byggnader.\nVälj en byggnad för att se vilken av skolans inriktningar som presenteras där.",
     },
     C: {
         image: "karta/C-huset.png",
         title: "C-BYGGNADEN",
-        description: "Planritning över C-byggnaden. Här hittar foto & film intriktningen, samt vår foto, film och podd studio.",
+        description: "Här hittar ni inriktningen foto & film. Utöver att ta del av information kan du ta en titt på film-, foto-, och poddstudion.",
     },
     D: {
         image: "karta/D1.png",
         title: "D-BYGGNADEN · FÖRSTA VÅNINGEN",
-        description: "Första våningens planritning. Här finns vårt  AI & Webbutvecklings klassrum och bildsal. Välj andra våningen för att fortsätta upp i byggnaden.",
+        description: "Här finns vårt klassrum för AI & Webbutveckling och bildsalen. Välj andra våningen för att fortsätta upp i byggnaden.",
     },
     Dupp: {
         image: "karta/D3.png",
         title: "D-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över D-byggnadens andra våning. Här finns Grafisk Desing",
+        description: "Här finns inriktningen Grafisk Design. Här pryds väggarna av elevernas fina arbeten.",
     },
     F: {
         image: "karta/Fakiren.png",
         title: "F-BYGGNADEN · FAKIREN",
-        description: "Planritning över F-byggnaden (Fakiren).",
+        description: "Fakiren är belägen på andra sidan Bredgatan. Lokalerna används under skoltid och har fem klassrum för bland annat musikteori, programmering och animation.",
     },
-    // B-byggnaden: lägg planritningen i public/karta/ och skriv filnamnet nedan,
-    // t.ex. image: "karta/B-huset.png". Så länge image är tom händer inget när man trycker på B-knappen.
+    // B-byggnaden har ingen planritning ännu, så sidan visar bara rubrik och text.
+    // Vill ni lägga till en bild: lägg den i public/karta/ och skriv t.ex. image: "karta/B-huset.png".
     B: {
         image: "",
         title: "B-BYGGNADEN",
-        description: "Planritning över B-byggnaden.",
+        description: "I denna byggnad har eleverna naturkunskap, fysik och kemi.",
     },
     Studion: {
         image: "karta/Musikstudion.png",
         title: "MUSIKSTUDION",
-        description: "Översikt över musikstudion och dess lokaler för musik produktion.",
+        description: "Detta är musikstudion och dess lokaler för musikproduktion.",
     },
     Aupp: {
         image: "karta/Ovre_vaning_A-huset.png",
         title: "A-BYGGNADEN · TREDJE VÅNINGEN",
-        description: "Planritning över A-byggnadens tredje våning. Lobby, administration, elevhälsa och bilioteket ligger här. ",
+        description: "Välkommen till tredje våningen. Här finner ni skolans Lobby, administration, elevhälsa och biblioteket. Vill ni veta hur vi arbetar med elevhälsa och andra viktiga frågor har ni kommit helt rätt.",
     },
     Aner: {
         image: "karta/andra_vaning_A-huset.png",
         title: "A-BYGGNADEN · ANDRA VÅNINGEN",
-        description: "Planritning över A-byggnadens andra våning. I klassrumet A7 finns Spelutveckling och AI & Webbutveckling i klassrumet A6, Spelgrafik finns i A3. I A5 är det filmvisning av Fotofilm programmet. Välj tredje våningen för att fortsätta.",
+        description: "Detta är A-byggnadens andra våning. I A7 hittar ni Spelutveckling, i A6 finner ni AI & Webbutveckling och Spelgrafik hittar ni i A3. Passa även på att kika in i A5 för att ta del av filmer skapade av våra elever som går inriktningen Foto & film. Välj tredje våningen för att ta reda på mer om skolan och hur vi arbetar.",
     },
 };
 

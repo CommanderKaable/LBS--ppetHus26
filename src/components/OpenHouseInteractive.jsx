@@ -35,8 +35,6 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
 
     const selectRoom = (room) => {
         if (room === roomSelected) return
-        // Byggnader utan planritning (tom image i salar.js) gör ingenting
-        if (!roompick[room]?.image) return
 
         setRoomHistory(previous => [...previous, roomSelected])
         setRoomSelected(room)
@@ -111,13 +109,16 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                 )}
                 <div className="openhouse-map-stage">
                     <div className="openhouse-map-image-wrap">
-                        <img
-                            key={roomSelected}
-                            src={selectedMap.image}
-                            alt={selectedMap.title}
-                            aria-describedby="openhouse-map-description"
-                            className="animate-map-in"
-                        />
+                        {/* Byggnader utan bild (t.ex. B) visar bara rubrik och text */}
+                        {selectedMap.image && (
+                            <img
+                                key={roomSelected}
+                                src={selectedMap.image}
+                                alt={selectedMap.title}
+                                aria-describedby="openhouse-map-description"
+                                className="animate-map-in"
+                            />
+                        )}
 
                         {isMainMap &&
                             buttons
