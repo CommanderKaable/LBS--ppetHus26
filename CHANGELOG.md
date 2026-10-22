@@ -1,5 +1,8 @@
 # Changelog – Öppet hus-appen
 
+## 2.7
+- Ny planritning för D-byggnadens första våning (`public/karta/D1.png`). D1 har inte längre gul fyllning.
+
 ## 2.6
 - Knapparna på översiktskartan har färg per byggnad: A gul, Musikstudion cyan, C magenta,
   D grön, Fakiren vit, B orange. Färgen ställs in med `color` i `src/data/salar.js`.
