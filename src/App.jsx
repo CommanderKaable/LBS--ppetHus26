@@ -49,7 +49,12 @@ export default function App() {
       <Header onNavigate={handleNavigate} activeSection={activeSection} />
       <main className={`${activeSection === "brand" ? "" : loadingClass} ${SelectedSection ? "single-section-view" : ""}`}>
         {SelectedSection ? (
-          <SelectedSection onNavigate={handleNavigate} />
+          <SelectedSection
+            // Kartan startas om vid varje klick på kartknappen, så att den
+            // alltid visar översiktskartan (även om man redan är inne på en planritning)
+            key={activeSection === "openhouse" ? `openhouse-${navigationVersion}` : activeSection}
+            onNavigate={handleNavigate}
+          />
         ) : (
           <Hero onNavigate={handleNavigate} />
         )}

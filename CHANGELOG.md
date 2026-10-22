@@ -1,5 +1,9 @@
 # Changelog – Öppet hus-appen
 
+## 2.5
+- Den gula kartknappen (bottenmenyn på mobil, menyn på dator) leder alltid till översiktskartan,
+  även när man redan är inne på en planritning.
+
 ## 2.4
 - Nya texter för alla byggnader och våningar på kartan (`src/data/salar.js`)
 - "STUDION" heter nu "MUSIKSTUDION"
