@@ -49,7 +49,7 @@ const salar = {
     },
     Studion: {
         image: "karta/Musikstudion.png",
-        title: "STUDION",
+        title: "MUSIKSTUDION",
         description: "Översikt över musikstudion och dess lokaler för musik produktion.",
     },
     Aupp: {
