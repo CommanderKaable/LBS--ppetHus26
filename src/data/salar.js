@@ -68,14 +68,15 @@ const salar = {
 
 // Knapparna på översiktskartan.
 // label = texten på knappen, room = vilken planritning ovan som öppnas,
-// x / y = position på kartbilden i procent (0–100) från vänster / uppifrån.
+// x / y = position på kartbilden i procent (0–100) från vänster / uppifrån,
+// color = knappens färg: "yellow", "cyan", "magenta", "green", "orange" eller "white".
 export const kartknappar = [
-    { id: "button-aner", label: "A BYGGNADEN", room: "Aner", x: 25, y: 16 },
-    { id: "button-b", label: "B BYGGNADEN", room: "B", x: 78, y: 16.5 },
-    { id: "button-studion", label: "Studion", room: "Studion", x: 82, y: 31 },
-    { id: "button-c", label: "C BYGGNADEN", room: "C", x: 25, y: 37 },
-    { id: "button-d", label: "D BYGGNADEN", room: "D", x: 34, y: 52.5 },
-    { id: "button-f", label: "FAKIREN", room: "F", x: 59, y: 89 },
+    { id: "button-aner", label: "A BYGGNADEN", room: "Aner", x: 25, y: 16, color: "yellow" },
+    { id: "button-b", label: "B BYGGNADEN", room: "B", x: 78, y: 16.5, color: "orange" },
+    { id: "button-studion", label: "Studion", room: "Studion", x: 82, y: 31, color: "cyan" },
+    { id: "button-c", label: "C BYGGNADEN", room: "C", x: 25, y: 37, color: "magenta" },
+    { id: "button-d", label: "D BYGGNADEN", room: "D", x: 34, y: 52.5, color: "green" },
+    { id: "button-f", label: "FAKIREN", room: "F", x: 59, y: 89, color: "white" },
 ];
 
 export default salar;

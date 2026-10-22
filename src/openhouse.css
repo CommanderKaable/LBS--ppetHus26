@@ -413,3 +413,47 @@
 .openhouse-map-description {
     white-space: pre-line;
 }
+
+/* ---------- 8. FÄRGER PÅ KARTKNAPPARNA ---------- */
+/* Färgen väljs per knapp i src/data/salar.js (color: "yellow" osv.) */
+.classroom-map-button.map-btn-yellow  { background: var(--yellow);  color: var(--dark-yellow);  border-color: var(--dark-yellow); }
+.classroom-map-button.map-btn-cyan    { background: var(--cyan);    color: var(--dark-cyan);    border-color: var(--dark-cyan); }
+.classroom-map-button.map-btn-magenta { background: var(--magenta); color: var(--white);        border-color: var(--dark-magenta); }
+.classroom-map-button.map-btn-green   { background: var(--green);   color: var(--dark-green);   border-color: var(--dark-green); }
+.classroom-map-button.map-btn-orange  { background: var(--orange);  color: var(--dark-orange);  border-color: var(--dark-orange); }
+.classroom-map-button.map-btn-white   { background: var(--white);   color: var(--dark-cyan);    border-color: var(--dark-cyan); }
+
+.classroom-map-button[class*="map-btn-"]:hover {
+    border-color: var(--black);
+    filter: brightness(1.05);
+}
+
+.classroom-map-button[class*="map-btn-"]:active {
+    filter: brightness(.92);
+}
+
+/* ---------- 9. GRÖN BANNER ---------- */
+/* Originalets "transition-green" är vit, så den gröna bannern
+   (startsidan och kartan) får en egen variant i LBS-grönt */
+.transition-lbs-green {
+    background: var(--green);
+    color: var(--dark-green);
+}
+
+.transition-lbs-green .transition-track span {
+    color: var(--dark-green);
+}
+
+@media (max-width: 600px) {
+    .transition-lbs-green {
+        min-height: 130px;
+        z-index: 9999;
+    }
+}
+
+/* Luften under bannern (bakom bottenmenyn) får mörk bakgrund i stället för vit */
+@media (max-width: 900px) {
+    .site main {
+        background: var(--black);
+    }
+}

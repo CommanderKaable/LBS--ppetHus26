@@ -127,6 +127,7 @@ const OpenHouseInteractive = ({ initialRoom = "Karta", allowedRooms }) => {
                                     <ButtonClassroom
                                         key={button.id}
                                         id={button.id}
+                                        color={button.color}
                                         style={{
                                             position: "absolute",
                                             left: `${button.x}%`,

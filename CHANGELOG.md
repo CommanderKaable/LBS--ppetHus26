@@ -1,5 +1,12 @@
 # Changelog – Öppet hus-appen
 
+## 2.6
+- Knapparna på översiktskartan har färg per byggnad: A gul, Musikstudion cyan, C magenta,
+  D grön, Fakiren vit, B orange. Färgen ställs in med `color` i `src/data/salar.js`.
+- Bannern på startsidan och kartan är grön i stället för magenta. Den använder en ny variant,
+  `transition-lbs-green`, eftersom originalets `transition-green` är vit.
+- Luften under bannern, bakom bottenmenyn, är mörk i stället för vit.
+
 ## 2.5
 - Den gula kartknappen (bottenmenyn på mobil, menyn på dator) leder alltid till översiktskartan,
   även när man redan är inne på en planritning.

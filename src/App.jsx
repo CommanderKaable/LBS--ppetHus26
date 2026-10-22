@@ -18,10 +18,10 @@ const sectionComponents = {
 
 // Färg på den rullande bannern (sist i varje vy)
 const bannerVariants = {
-  brand: "magenta",
+  brand: "lbs-green",
   quiz: "cyan",
   programs: "green",
-  openhouse: "magenta",
+  openhouse: "lbs-green",
   form: "yellow"
 };
 
